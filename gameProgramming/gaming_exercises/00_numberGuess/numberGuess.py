@@ -49,26 +49,35 @@ playerName = input("Please input the name you would like to be referred to as, t
 #print("Guess a number from 0 to 25. \nYou have 4 guesses. \nIf you guess it right, you get a point. \nIf you don't get it in four guesses, the CPU gets a point.")
 # ADD CODE HERE TO CHANGE DIFFICULTY BETWEEN EACH MATCH
 # print() an explanation of your 3 difficulty levels
-print(f"Alright {playerName}, please select a difficulty. \nEasy (1): The secret number is from 1 - 20, and you get 5 guesses. \nMedium (2): The secret number is from 1 - 35, and you get 4 guesses. \nHard (3): The secret number is from 1 - 50, and you get 3 guesses.")
+print(f"Alright {playerName}, please select a difficulty. \nVery Easy (1): The secret number is from 1 - 10, and you get 5 guesses. \nEasy (2): The secret number is from 1 - 20, and you get 5 guesses. \nMedium (3): The secret number is from 1 - 35, and you get 4 guesses.")
+print("Hard (4): The secret number is from 1 - 50, and you get 3 guesses. \nVery Hard (5): The secret number is from 1 - 100, and you get 3 guesses.")
 # use input() to store difficulty in difficulty variable
 # DIFFICULTY SELECT
 difficulty = int(input("Type your preferred difficulty number, then press enter.\n"))
 # Assign values to numAttempts, rangeMin, and rangeMax based on choice
 if difficulty == 1:
     rangeMin = 1
-    rangeMax = 20
+    rangeMax = 10
     numAttempts = 5
 elif difficulty == 2:
     rangeMin = 1
+    rangeMax = 20
+    numAttempts = 5
+elif difficulty == 3:
+    rangeMin = 1
     rangeMax = 35
     numAttempts = 4
-elif difficulty == 3:
+elif difficulty == 4:
     rangeMin = 1
     rangeMax = 50
     numAttempts = 3
+elif difficulty == 5:
+    rangeMin = 1
+    rangeMax = 100
+    numAttempts = 3
 else:
     # Make this a default setting, print that difficulty wasn't selected properly, use values for normal.  
-    print("Selected difficulty option not found. \nDifficulty will default to option 2, Medium.")
+    print("Selected difficulty option not found. \nDifficulty will default to option 3, Medium.")
     rangeMin = 1
     rangeMax = 35
     numAttempts = 4
