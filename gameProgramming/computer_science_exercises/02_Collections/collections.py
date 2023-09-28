@@ -1,4 +1,4 @@
-# Collections Examples, Xavier Oliver, v0.1d
+# Collections Examples, Xavier Oliver, v0.2a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
 breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -28,3 +28,25 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(breakfastFoods[2])
 #print(testScores[2])
 #print(classGPA[2])
+
+# Changing Items in a List
+# breakfastFoods[0] = "Sausage"
+# testScores[0] = 97
+# classGPA[0] = 3.57
+# print(breakfastFoods[0])
+# print(testScores[0])
+# print(classGPA[0])
+# print(breakfastFoods)
+# print(testScores)
+# print(classGPA)
+
+# Change 5th Element in Each List
+breakfastFoods[4] = "Orange Juice"
+testScores[4] = 50
+classGPA[4] = 4.30
+print(breakfastFoods[4])
+print(testScores[4])
+print(classGPA[4])
+print(breakfastFoods)
+print(testScores)
+print(classGPA)
