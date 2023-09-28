@@ -1,4 +1,4 @@
-# Collections Examples, Xavier Oliver, v0.2a
+# Collections Examples, Xavier Oliver, v0.2b
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
 breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -41,12 +41,45 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 # print(classGPA)
 
 # Change 5th Element in Each List
-breakfastFoods[4] = "Orange Juice"
-testScores[4] = 50
-classGPA[4] = 4.30
-print(breakfastFoods[4])
-print(testScores[4])
-print(classGPA[4])
+# breakfastFoods[4] = "Orange Juice"
+# testScores[4] = 50
+# classGPA[4] = 4.30
+# print(breakfastFoods[4])
+# print(testScores[4])
+# print(classGPA[4])
+# print(breakfastFoods)
+# print(testScores)
+# print(classGPA)
+
+# Adding and Inserting Items to a List
+# .append() adds an item to the END of a list
+# breakfastFoods.append("Hash Browns")
+# print(breakfastFoods)
+# testScores.append(99)
+# print(testScores)
+# classGPA.append(1.99)
+# print(classGPA)
+
+# .insert() allows you to place an item at a specific index in the list.
+# breakfastFoods.insert(3, "Parfait")
+# print(breakfastFoods)
+# testScores.insert(3, 55)
+# print(testScores)
+# classGPA.insert(3, 0.0)
+# print(classGPA)
+
+# Appending to Lists
+breakfastFoods.append("Eggs")
 print(breakfastFoods)
+testScores.append(85)
 print(testScores)
+classGPA.append(1.24)
+print(classGPA)
+
+# Inserting to Index 5
+breakfastFoods.insert(5, "Omelette")
+print(breakfastFoods)
+testScores.insert(5, 72)
+print(testScores)
+classGPA.insert(5, 1.62)
 print(classGPA)
