@@ -1,4 +1,4 @@
-# Collections Examples, Xavier Oliver, v0.4c
+# Collections Examples, Xavier Oliver, v0.5a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
 # breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -170,3 +170,8 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 1.74]
 # print(f"The test scores list is {testScores}.")
 # classGPA.clear()
 # print(f"The class GPA list is {classGPA}.")
+
+# Common Bugs -- Index out of Range
+print(f"The last item in the list is {breakfastFoods[5]}.")
+
+print(f"The last item in the testScores list is {testScores[len(testScores) - 1]}.")
