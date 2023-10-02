@@ -1,4 +1,4 @@
-# Collections Examples, Xavier Oliver, v0.3a
+# Collections Examples, Xavier Oliver, v0.4a
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
 breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -122,6 +122,20 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 # print(classGPA)
 
 # Determining List Length
-print(f"There are {len(breakfastFoods)} items in the breakfastFoods list.")
-print(f"There are {len(testScores)} items in the testScores list.")
-print(f"There are {len(classGPA)} items in the classGPA list.")
+# print(f"There are {len(breakfastFoods)} items in the breakfastFoods list.")
+# print(f"There are {len(testScores)} items in the testScores list.")
+# print(f"There are {len(classGPA)} items in the classGPA list.")
+
+# List Methods -- Functions for working with lists. 
+# Sorting Lists -- Alphanumerical -- Ascending -- Capital Letters before Lower Case Letters
+print(f"The original breakfastFoods list is {breakfastFoods}.")
+breakfastFoods.sort()
+print(f"The sorted breakfastFoods list is {breakfastFoods}.")
+
+print(f"The original testScores list is {testScores}.")
+testScores.sort()
+print(f"The sorted testScores list is {testScores}.")
+
+print(f"The original classGPA list is {classGPA}.")
+classGPA.sort()
+print(f"The sorted classGPA list is {classGPA}.")
