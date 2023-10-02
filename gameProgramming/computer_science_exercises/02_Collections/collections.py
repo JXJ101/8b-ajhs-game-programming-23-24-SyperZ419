@@ -1,4 +1,4 @@
-# Collections Examples, Xavier Oliver, v0.2b
+# Collections Examples, Xavier Oliver, v0.2c
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
 breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -24,7 +24,7 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 #print(testScores[-1])
 #print(classGPA[-1])
 
-# Access the 3rd Element in Each List
+# WYOC Access the 3rd Element in Each List
 #print(breakfastFoods[2])
 #print(testScores[2])
 #print(classGPA[2])
@@ -40,7 +40,7 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 # print(testScores)
 # print(classGPA)
 
-# Change 5th Element in Each List
+# WYOC Change 5th Element in Each List
 # breakfastFoods[4] = "Orange Juice"
 # testScores[4] = 50
 # classGPA[4] = 4.30
@@ -68,18 +68,55 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 # classGPA.insert(3, 0.0)
 # print(classGPA)
 
-# Appending to Lists
-breakfastFoods.append("Eggs")
+# WYOC Appending to Lists
+# print("APPENDS")
+# breakfastFoods.append("Eggs")
+# print(breakfastFoods)
+# testScores.append(85)
+# print(testScores)
+# classGPA.append(1.24)
+# print(classGPA)
+
+# WYOC Inserting to Index 5
+# print("INSERTS")
+# breakfastFoods.insert(5, "Omelette")
+# print(breakfastFoods)
+# testScores.insert(5, 72)
+# print(testScores)
+# classGPA.insert(5, 1.62)
+# print(classGPA)
+
+# Deleting Items from a List
+# Use .remove() to remove a specific item from the list.
+# breakfastFoods.remove("Waffles")
+# print(breakfastFoods)
+# testScores.remove(100)
+# print(testScores)
+# classGPA.remove(2.25)
+# print(classGPA)
+
+# To delete using the index value we use .pop()
+# breakfastFoods.pop(4)
+# print(breakfastFoods)
+# testScores.pop(4)
+# print(testScores)
+# classGPA.pop(4)
+# print(classGPA)
+
+# WYOC .pop 2nd element from each list
+print("Removal by Index")
+breakfastFoods.pop(2)
 print(breakfastFoods)
-testScores.append(85)
+testScores.pop(2)
 print(testScores)
-classGPA.append(1.24)
+classGPA.pop(2)
 print(classGPA)
 
-# Inserting to Index 5
-breakfastFoods.insert(5, "Omelette")
+# WYOC .remove any item from the list
+print("Removal by Item")
+breakfastFoods.remove("Cereal")
 print(breakfastFoods)
-testScores.insert(5, 72)
+testScores.remove(27)
 print(testScores)
-classGPA.insert(5, 1.62)
+classGPA.remove(1.99)
 print(classGPA)
