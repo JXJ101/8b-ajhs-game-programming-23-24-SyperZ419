@@ -1,4 +1,4 @@
-# Collections Examples, Xavier Oliver, v0.4b
+# Collections Examples, Xavier Oliver, v0.4c
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
 # breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
@@ -147,18 +147,26 @@ testScores = [95, 100, 25, 15, 27, 35, 27]
 classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 1.74]
 
 # .count() will return the number of times a value appears in a list
-numWaffles = breakfastFoods.count("Waffles")
-print(f"There are {numWaffles} Waffles in the list.")
-numPancakes = breakfastFoods.count("Pancakes")
-print(f"There are {numPancakes} Pancakes in the list.")
+# numWaffles = breakfastFoods.count("Waffles")
+# print(f"There are {numWaffles} Waffles in the list.")
+# numPancakes = breakfastFoods.count("Pancakes")
+# print(f"There are {numPancakes} Pancakes in the list.")
 
 # WYOC Counting Lists
-num35 = testScores.count(35)
-print(f"There are {num35} 35s in the list.")
-num27 = testScores.count(27)
-print(f"There are {num27} 27s in the list.")
+# num35 = testScores.count(35)
+# print(f"There are {num35} 35s in the list.")
+# num27 = testScores.count(27)
+# print(f"There are {num27} 27s in the list.")
 
-num099 = classGPA.count(0.99)
-print(f"There are {num099} 0.99s in the list.")
-num174 = classGPA.count(1.74)
-print(f"There are {num174} 1.74s in the list.")
+# num099 = classGPA.count(0.99)
+# print(f"There are {num099} 0.99s in the list.")
+# num174 = classGPA.count(1.74)
+# print(f"There are {num174} 1.74s in the list.")
+
+# Deleting All Contents of a List -- .clear()
+# breakfastFoods.clear()
+# print(f"The breakfast foods list is {breakfastFoods}.")
+# testScores.clear()
+# print(f"The test scores list is {testScores}.")
+# classGPA.clear()
+# print(f"The class GPA list is {classGPA}.")
