@@ -1,13 +1,13 @@
-# Collections Examples, Xavier Oliver, v0.4a
+# Collections Examples, Xavier Oliver, v0.4b
 
 # LIST -- ORDERED, CHANGEABLE, ALLOWS DUPLICATE VALUES
-breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
+# breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk"]
 # Each item of the list is known as an ELEMENT.
 # The position in the for each is the INDEX.
 # The element "BACON" is at index 0.
 # Python Only: index -1, it is the last item on the list.
-testScores = [95, 100, 25, 15, 27, 35]
-classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
+# testScores = [95, 100, 25, 15, 27, 35]
+# classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 
 # Printing Contents of a List
 #print(breakfastFoods)
@@ -123,19 +123,42 @@ classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25]
 
 # Determining List Length
 # print(f"There are {len(breakfastFoods)} items in the breakfastFoods list.")
+# WYOC List Length
 # print(f"There are {len(testScores)} items in the testScores list.")
 # print(f"There are {len(classGPA)} items in the classGPA list.")
 
 # List Methods -- Functions for working with lists. 
 # Sorting Lists -- Alphanumerical -- Ascending -- Capital Letters before Lower Case Letters
-print(f"The original breakfastFoods list is {breakfastFoods}.")
-breakfastFoods.sort()
-print(f"The sorted breakfastFoods list is {breakfastFoods}.")
+# print(f"The original breakfastFoods list is {breakfastFoods}.")
+# breakfastFoods.sort()
+# print(f"The sorted breakfastFoods list is {breakfastFoods}.")
 
-print(f"The original testScores list is {testScores}.")
-testScores.sort()
-print(f"The sorted testScores list is {testScores}.")
+# WYOC Sorting Lists
+# print(f"The original testScores list is {testScores}.")
+# testScores.sort()
+# print(f"The sorted testScores list is {testScores}.")
 
-print(f"The original classGPA list is {classGPA}.")
-classGPA.sort()
-print(f"The sorted classGPA list is {classGPA}.")
+# print(f"The original classGPA list is {classGPA}.")
+# classGPA.sort()
+# print(f"The sorted classGPA list is {classGPA}.")
+
+breakfastFoods = ["Bacon", "Waffles", "Pancakes", "Cereal", "Milk", "Pancakes"]
+testScores = [95, 100, 25, 15, 27, 35, 27]
+classGPA = [3.14, 2.25, 1.74, 1.99, 0.99, 4.25, 1.74]
+
+# .count() will return the number of times a value appears in a list
+numWaffles = breakfastFoods.count("Waffles")
+print(f"There are {numWaffles} Waffles in the list.")
+numPancakes = breakfastFoods.count("Pancakes")
+print(f"There are {numPancakes} Pancakes in the list.")
+
+# WYOC Counting Lists
+num35 = testScores.count(35)
+print(f"There are {num35} 35s in the list.")
+num27 = testScores.count(27)
+print(f"There are {num27} 27s in the list.")
+
+num099 = classGPA.count(0.99)
+print(f"There are {num099} 0.99s in the list.")
+num174 = classGPA.count(1.74)
+print(f"There are {num174} 1.74s in the list.")
