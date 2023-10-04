@@ -6,7 +6,6 @@ Use a while loop to allow the user to enter 10 items into the player inventory.
 Sort the inventory. 
 Display all items in the player inventory. 
 
-
 *** Removing Items *** 
 Use playerInventory with items created above.  
 Use a while loop, allow the player to remove up to five items from the player inventory. 
