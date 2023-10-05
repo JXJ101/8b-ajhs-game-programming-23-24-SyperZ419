@@ -15,8 +15,9 @@
 # print(playerInventory)
 
 # Fixed Inventory System
-weaponList = ["Sword", "Bow", "Axe", "Hammer", "Staff"]
-for x in range(len(weaponList)):
-    print(weaponList [x])
+# weaponList = ["Sword", "Bow", "Axe", "Hammer", "Staff"]
+# for x in range(len(weaponList)):
+#     print(weaponList [x])
 
-
+# Item Exists in Inventory
+doorKeys = ["red", "blue", "green", "purple", "black"]
