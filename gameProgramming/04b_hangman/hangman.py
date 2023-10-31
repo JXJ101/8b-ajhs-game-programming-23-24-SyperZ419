@@ -1,4 +1,4 @@
-# Hangman Game By Xavier Oliver, v0.3
+# Hangman Game By Xavier Oliver, v0.4
 import random
 words = 'cat heat fold paper freeze keys light gate ham corn fiend utopia twilight sporange potato dystopia falcon raptor fossilized permeate pragmatic cornucopia pneumonoultramicroscopicsilicovolcanoconiosis hippopotomonstrosesquippedaliophobia honorificabilitudinitatibus floccinaucinihilipilification incomprehensible sigma mitochondrion agglutinative variable volcanic metamorphic'.split()
 
@@ -46,8 +46,18 @@ def getRandomWord(wordList): # Return a random word from the list.
     # len(listname) - 1 is  EXTREMELY COMMON WHEN WORKING WITH LISTS.
     return wordList[wordIndex]
 
-i = 0
-while i < 50 :
-    word = getRandomWord(words)
-    print(word)
-    i += 1
+def displayWord(missedLetters, correctLetters, secretWord):
+    print(HANGMAN_BOARD[len(missedLetters)])
+    print()
+
+    print('Missed Letters:', end = ' ')
+    for eachLetter in missedLetters:
+        print(eachLetter, end = ' ')
+    print()
+    # FINISH THURSDAY
+
+# i = 0
+# while i < 50 :
+#     word = getRandomWord(words)
+#     print(word)
+#     i += 1
