@@ -1,4 +1,4 @@
-# Hangman Game By Xavier Oliver, v0.4
+# Hangman Game By Xavier Oliver, v0.5
 import random
 words = 'cat heat fold paper freeze keys light gate ham corn fiend utopia twilight sporange potato dystopia falcon raptor fossilized permeate pragmatic cornucopia pneumonoultramicroscopicsilicovolcanoconiosis hippopotomonstrosesquippedaliophobia honorificabilitudinitatibus floccinaucinihilipilification incomprehensible sigma mitochondrion agglutinative variable volcanic metamorphic'.split()
 
@@ -54,7 +54,17 @@ def displayWord(missedLetters, correctLetters, secretWord):
     for eachLetter in missedLetters:
         print(eachLetter, end = ' ')
     print()
-    # FINISH THURSDAY
+    
+    blanks = '_' * len(secretWord)
+    
+    # Replace Blanks with Correct Letters
+    for i in range(len(secretWord)):
+        if secretWord[i] in correctLetters:
+            blanks = blanks[:i] + secretWord[i] + blanks[i+1:]
+
+    for letter in blanks:
+        print(letter, end = ' ')
+    print()
 
 # i = 0
 # while i < 50 :
