@@ -66,6 +66,21 @@ def displayWord(missedLetters, correctLetters, secretWord):
         print(letter, end = ' ')
     print()
 
+
+def getGuess(alreadyGuessed):
+    while True:
+        print('Please guess a letter, then hit ENTER')
+        guess = input()
+        guess = guess.lower()
+        if len(guess) != 1:
+            print('Please enter only one letter.')
+        elif guess in alreadyGuessed:
+            print('You have already guessed this letter. Please guess a different letter.')
+        elif guess not in 'abcdefghijklmnopqrstuvwxyz':
+            print('Please guess a LETTER.')
+        else:
+            return guess
+
 # i = 0
 # while i < 50 :
 #     word = getRandomWord(words)
