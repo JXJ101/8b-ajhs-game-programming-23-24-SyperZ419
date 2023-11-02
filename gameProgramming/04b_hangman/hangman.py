@@ -1,4 +1,4 @@
-# Hangman Game By Xavier Oliver, v0.5
+# Hangman Game By Xavier Oliver, v0.6
 import random
 words = 'cat heat fold paper freeze keys light gate ham corn fiend utopia twilight sporange potato dystopia falcon raptor fossilized permeate pragmatic cornucopia pneumonoultramicroscopicsilicovolcanoconiosis hippopotomonstrosesquippedaliophobia honorificabilitudinitatibus floccinaucinihilipilification incomprehensible sigma mitochondrion agglutinative variable volcanic metamorphic'.split()
 
@@ -80,6 +80,11 @@ def getGuess(alreadyGuessed):
             print('Please guess a LETTER.')
         else:
             return guess
+        
+def playAgain():
+    print('How about another game? Yes or No.')
+    return input().lower().startswith('y')
+
 
 # i = 0
 # while i < 50 :
