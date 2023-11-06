@@ -1,4 +1,4 @@
-# Hangman Game By Xavier Oliver, v0.7
+# Hangman Game By Xavier Oliver, v0.8
 import random
 words = 'cat heat fold paper freeze keys light gate ham corn fiend utopia twilight sporange potato dystopia falcon raptor fossilized permeate pragmatic cornucopia pneumonoultramicroscopicsilicovolcanoconiosis hippopotomonstrosesquippedaliophobia honorificabilitudinitatibus floccinaucinihilipilification incomprehensible sigma mitochondrion agglutinative variable volcanic metamorphic'.split()
 
@@ -107,10 +107,10 @@ while True:
             if secretWord[i] not in correctLetters:
                 foundAllLetters = False
                 break
-            if foundAllLetters:
-                print('Victory has been attained.')
-                print('This was the secret word: ' + secretWord)
-                gameIsDone = True
+        if foundAllLetters:
+            print('Victory has been attained.')
+            print('This was the secret word: ' + secretWord)
+            gameIsDone = True
     else:
         missedLetters = missedLetters + guess
 
