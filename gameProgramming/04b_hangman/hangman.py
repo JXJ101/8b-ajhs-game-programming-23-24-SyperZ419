@@ -136,7 +136,7 @@ gameIsDone = False
 while True:
     print('The secret word is from the ' + secretSet + ' category.\n')
     displayBoard(missedLetters, correctLetters, secretWord)
-    print(secretWord)
+    #print(secretWord)
 
     guess = getGuess(missedLetters + correctLetters)
 
