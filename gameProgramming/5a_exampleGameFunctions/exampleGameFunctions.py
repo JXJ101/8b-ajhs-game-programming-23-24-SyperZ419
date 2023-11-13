@@ -1,6 +1,8 @@
 # Example Game Functions Project, Xavier Oliver, v0.0
 import random
-def functionOne():
+movelist = 'Fireball Icebeam Thunderbolt Punch Slash Stab Kamikaze Heal Guard'.split()
+
+def generateStats():
     pass
 
 def functionTwo(param1):
@@ -11,3 +13,4 @@ def functionThree(param1 = "Default Value"):
 
 def functionFour(param1, param2, param3):
     pass
+
