@@ -1,16 +1,37 @@
-# Example Game Functions Project, Xavier Oliver, v0.0
+# Example Game Functions Project, Xavier Oliver, v0.1
 import random
-movelist = 'Fireball Icebeam Thunderbolt Punch Slash Stab Kamikaze Heal Guard'.split()
-
+movelist = ['Fireball', 'Ice Beam', 'Thunderbolt','Sword Slash', 'Kamikaze', 'Heal', 'Guard']
+enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
 def generateStats():
-    pass
-
+    i = 0
+    stats = []
+    while i < 4:
+        strengthValue = random.randint(1, 30)
+        speedValue = random.randint(1, 30)
+        defenseValue = random.randint(1, 30)
+        accuracyValue = random.randint(1, 30)
+        if i == 0:
+            print(f'Strength: {strengthValue}')
+            i += 1
+        elif i == 1:
+            print(f'Speed: {speedValue}')
+            i += 1
+        elif i == 2:
+            print(f'Defense: {defenseValue}')
+            i += 1
+        elif i == 3:
+            print(f'Accuracy: {accuracyValue}')
+            i += 1
+        else:
+            break
+    
 def functionTwo(param1):
     pass
 
-def functionThree(param1 = "Default Value"):
+def functionThree(param1 = 'Default Value'):
     pass
 
-def functionFour(param1, param2, param3):
+def fuctionFour(param1, param2, param3):
     pass
 
+generateStats()
