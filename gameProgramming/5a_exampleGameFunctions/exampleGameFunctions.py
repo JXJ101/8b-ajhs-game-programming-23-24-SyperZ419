@@ -20,12 +20,15 @@ def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]):
     damageTaken = enemyAttackValue - defense
     if damageTaken <= 0:
         damageTaken = 0
-    if skillUsed == 'Guard':
+        print('You took no damage.')
+    elif skillUsed == 'Guard':
+        guardActive = True
+        if guardActive == True:
             damageTaken = damageTaken/2
-    if type(damageTaken) == float:
-        damageTaken = round(damageTaken)
-        damageTaken = int(damageTaken)
-        print(f'Since guard was active, you took {damageTaken} damage.')
+        if type(damageTaken) == float:
+            damageTaken = round(damageTaken)
+            damageTaken = int(damageTaken)
+            print(f'Since guard was active, you took {damageTaken} damage.')
     else:
         print(f'You took {damageTaken} damage.')
     return damageTaken
@@ -36,4 +39,4 @@ def fuctionFour(param1, param2, param3):
 
 
 
-damageCalc('Guard', 8)
+damageCalc('Guard', 56)
