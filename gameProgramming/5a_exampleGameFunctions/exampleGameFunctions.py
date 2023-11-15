@@ -2,7 +2,7 @@
 import random
 movelist = ['Fireball', 'Ice Beam', 'Thunderbolt','Sword Slash', 'Kamikaze', 'Heal', 'Guard']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
-def generateStats():
+def generateStats(): # Generates player stats. No parameters required. Returns the stats list.
     stats = []
     stats.append(random.randint(1, 30)) # Attack
     stats.append(random.randint(1, 30)) # Defense
@@ -11,12 +11,9 @@ def generateStats():
     print(stats)
     return stats
     
-def functionTwo(param1):
-    pass
-
 statsList = generateStats()
 #print(statsList[1])
-def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]):
+def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculates how much damage the player took. Requires the enemy's attack stat, the skill used by the player, and the player's defense value from the previous function.
     damageTaken = enemyAttackValue - defense
     if damageTaken <= 0:
         damageTaken = 0
@@ -33,6 +30,8 @@ def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]):
         print(f'You took {damageTaken} damage.')
     return damageTaken
     
+def functionThree(param1):
+    pass
 
 def fuctionFour(param1, param2, param3):
     pass
