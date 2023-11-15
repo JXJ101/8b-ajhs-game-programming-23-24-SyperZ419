@@ -28,10 +28,10 @@ def generateStats():
 def functionTwo(param1):
     pass
 
-def manaAmountCalc(manaCost, maxMana = 100):
+def damageCalc(enemyAttackValue, defense = defenseValue):
     pass
 
 def fuctionFour(param1, param2, param3):
     pass
 
-generateStats()
+#generateStats()
