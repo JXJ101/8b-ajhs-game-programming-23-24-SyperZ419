@@ -4,7 +4,6 @@ movelist = ['Fireball', 'Ice Beam', 'Thunderbolt','Sword Slash', 'Kamikaze', 'He
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
 def generateStats():
     i = 0
-    stats = []
     while i < 4:
         strengthValue = random.randint(1, 30)
         speedValue = random.randint(1, 30)
@@ -24,11 +23,12 @@ def generateStats():
             i += 1
         else:
             break
+    return strengthValue, speedValue, defenseValue, accuracyValue
     
 def functionTwo(param1):
     pass
 
-def functionThree(param1 = 'Default Value'):
+def manaAmountCalc(manaCost, maxMana = 100):
     pass
 
 def fuctionFour(param1, param2, param3):
