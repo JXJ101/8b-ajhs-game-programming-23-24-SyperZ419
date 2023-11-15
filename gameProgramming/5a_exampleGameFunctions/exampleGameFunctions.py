@@ -30,12 +30,11 @@ def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculate
         print(f'You took {damageTaken} damage.')
     return damageTaken
     
-def functionThree(param1):
+def enemySelect():
     pass
 
 def fuctionFour(param1, param2, param3):
     pass
-
 
 
 damageCalc('Guard', 56)
