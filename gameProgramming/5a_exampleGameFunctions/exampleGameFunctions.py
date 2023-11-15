@@ -3,35 +3,36 @@ import random
 movelist = ['Fireball', 'Ice Beam', 'Thunderbolt','Sword Slash', 'Kamikaze', 'Heal', 'Guard']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
 def generateStats():
-    i = 0
-    while i < 4:
-        strengthValue = random.randint(1, 30)
-        speedValue = random.randint(1, 30)
-        defenseValue = random.randint(1, 30)
-        accuracyValue = random.randint(1, 30)
-        if i == 0:
-            print(f'Strength: {strengthValue}')
-            i += 1
-        elif i == 1:
-            print(f'Speed: {speedValue}')
-            i += 1
-        elif i == 2:
-            print(f'Defense: {defenseValue}')
-            i += 1
-        elif i == 3:
-            print(f'Accuracy: {accuracyValue}')
-            i += 1
-        else:
-            break
-    return strengthValue, speedValue, defenseValue, accuracyValue
+    stats = []
+    stats.append(random.randint(1, 30))
+    stats.append(random.randint(1, 30))
+    stats.append(random.randint(1, 30))
+    stats.append(random.randint(1, 30))
+    print(stats)
+    return stats
     
 def functionTwo(param1):
     pass
 
-def damageCalc(enemyAttackValue, defense = defenseValue):
-    pass
+statsList = generateStats()
+print(statsList[1])
+def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]):
+    damageTaken = enemyAttackValue - defense
+    if skillUsed == 'Guard':
+        damageTaken = damageTaken/2
+        print(f'Since guard was active, you took {damageTaken} damage.')
+        if damageTaken < 0:
+            damageTaken = 0
+        elif .5 in damageTaken:
+            damageTaken = damageTaken.round(>0.5)
+    else:
+        print(f'You took {damageTaken} damage.')
+    return damageTaken
+    
 
 def fuctionFour(param1, param2, param3):
     pass
 
-#generateStats()
+
+
+damageCalc('Guard', 24)
