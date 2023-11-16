@@ -11,7 +11,7 @@ def generateStats(): # Generates player stats. No parameters required. Returns t
     print(stats)
     return stats
     
-statsList = generateStats()
+statsList = generateStats() # Outputs returned list to a new variable
 #print(statsList[1])
 def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculates how much damage the player took. Requires the enemy's attack stat, the skill used by the player, and the player's defense value from the previous function.
     damageTaken = enemyAttackValue - defense
@@ -31,10 +31,14 @@ def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculate
     return damageTaken
     
 def enemySelect():
-    pass
+    for x in range(len(enemyList)):
+        print('test')
+
+
 
 def fuctionFour(param1, param2, param3):
     pass
 
 
-damageCalc('Guard', 56)
+#damageCalc('Guard', 56)
+enemySelect()
