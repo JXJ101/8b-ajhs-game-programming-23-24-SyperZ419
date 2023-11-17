@@ -1,8 +1,8 @@
-# Example Game Functions Project, Xavier Oliver, v0.2
+# Example Game Functions Project, Xavier Oliver, v0.3
 import random
 movelist = ['Fireball', 'Ice Beam', 'Thunderbolt','Sword Slash', 'Kamikaze', 'Heal', 'Guard']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
-def generateStats(): # Generates player stats. No parameters required. Returns the stats list.
+def generatePlayerStats(): # Generates player stats. No parameters required. Returns the stats list.
     stats = []
     stats.append(random.randint(1, 30)) # Attack
     stats.append(random.randint(1, 30)) # Defense
@@ -11,7 +11,7 @@ def generateStats(): # Generates player stats. No parameters required. Returns t
     print(stats)
     return stats
     
-statsList = generateStats() # Outputs returned list to a new variable
+statsList = generatePlayerStats() # Outputs returned list to a new variable
 #print(statsList[1])
 def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculates how much damage the player took. Requires the enemy's attack stat, the skill used by the player, and the player's defense value from the previous function.
     damageTaken = enemyAttackValue - defense
@@ -21,7 +21,7 @@ def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculate
     elif skillUsed == 'Guard':
         guardActive = True
         if guardActive == True:
-            damageTaken = damageTaken/2
+            damageTaken /= 2
         if type(damageTaken) == float:
             damageTaken = round(damageTaken)
             damageTaken = int(damageTaken)
@@ -30,15 +30,19 @@ def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculate
         print(f'You took {damageTaken} damage.')
     return damageTaken
     
-def enemySelect():
-    for x in range(len(enemyList)):
+def enemySelect(): # Chooses a random enemy and amount of enemies. No parameters required.
+    i = random.randint(0, len(enemyList) - 1)
+    enemyAmount = random.randint(1, 5)
+    enemy = enemyList[i]
+    if enemyAmount == 1:
+        print(f'You encountered {enemyAmount} {enemy}.')
+    else:
+        print(f'You encountered {enemyAmount} {enemy}s.')
+    
         
-
-
-
-def fuctionFour(param1, param2, param3):
+def playerName():
     pass
 
 
-#damageCalc('Guard', 56)
+damageCalc('Guard', 33.7)
 enemySelect()
