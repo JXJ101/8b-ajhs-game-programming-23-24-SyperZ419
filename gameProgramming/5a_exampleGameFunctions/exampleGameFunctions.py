@@ -40,9 +40,17 @@ def enemySelect(): # Chooses a random enemy and amount of enemies. No parameters
         print(f'You encountered {enemyAmount} {enemy}s.')
     
         
-def playerName():
-    pass
+def playerName(): # Obtains character's name from user input. No parameters. Returns name of character.
+    name = input('Name your character.')
+    nameConfirm = input(f'Your input name is {name}, correct? \nPlease input either yes or no.').lower
+    if nameConfirm == 'yes':
+        print('Character name confirmed.')
+    else:
+        nameConfirm = input('Please re-input the name of your character.').lower
+        print('Character name confirmed.')
+    return name
 
-
-damageCalc('Guard', 33.7)
+playerName()
 enemySelect()
+damageCalc('Guard', 33.7)
+
