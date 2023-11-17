@@ -32,7 +32,7 @@ def damageCalc(skillUsed, enemyAttackValue, defense = statsList[1]): # Calculate
     
 def enemySelect():
     for x in range(len(enemyList)):
-        print('test')
+        
 
 
 
