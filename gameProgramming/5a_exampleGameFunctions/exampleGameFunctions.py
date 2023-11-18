@@ -2,6 +2,7 @@
 import random
 movelist = ['Fireball', 'Ice Beam', 'Thunderbolt','Sword Slash', 'Kamikaze', 'Heal', 'Guard']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
+playerHealth = 150
 def generatePlayerStats(): # Generates player stats. No parameters required. Returns the stats list.
     stats = []
     stats.append(random.randint(1, 30)) # Attack
@@ -49,6 +50,9 @@ def playerName(): # Obtains character's name from user input. No parameters. Ret
         nameConfirm = input('Please re-input the name of your character.').lower
         print('Character name confirmed.')
     return name
+
+def playerHealthCheck(playerCurrentHealth = playerHealth):
+    pass
 
 playerName()
 enemySelect()
