@@ -64,11 +64,16 @@ def playerName(): # Obtains character's name from user input. No parameters. Ret
 #             break
 #     return skill
 
+def gameOver(playerCurrentHealth = playerHealth): # Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
+    pass
 
 
 
-playerName()
-enemySelect()
-skillUsed = playerTurn()
-playerDamage = damageCalc(skillUsed, 45)
-playerHealth -= playerDamage
+
+
+# playerName()
+# enemySelect()
+#skillUsed = playerTurn()
+#playerDamage = damageCalc(skillUsed, 45)
+#playerHealth -= playerDamage
+gameOver(0)
