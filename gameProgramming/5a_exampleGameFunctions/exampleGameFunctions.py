@@ -70,8 +70,29 @@ def gameOver(playerCurrentHealth): # Checks to see if the player's health is les
         input('You have lost all of your health. \nGame Over.')
 
 def criticalHit(skillUsed, playerDamageDealt):
-    pass
+    critMultiplier = 1.50
+    if skillUsed != 'guard':
+        critRoll = random.randint(1, 100)
+        if critRoll >= 85:
+            critSuccess = True
+            if statsList[4] >= 10:
+                critMultiplier = 2.0
+                playerDamageDealt *= critMultiplier
+                if type(playerDamageDealt) == float:
+                    round(playerDamageDealt)
+                    int(playerDamageDealt)
+                    print(f'Because of your high luck, you landed a strong critical hit. \nYou dealt {playerDamageDealt} damage.')
+                else:
+                    print(f'Because of your high luck, you landed a strong critical hit. \nYou dealt {playerDamageDealt} damage.')
+            else:
+                playerDamageDealt *= critMultiplier
+                round(playerDamageDealt)
+                int(playerDamageDealt)
+                print(f'You landed a critical hit. \nYou dealt {playerDamageDealt} damage.')
 
+        else:
+            critSuccess = False
+    return playerDamageDealt
 
 
 # playerName()
