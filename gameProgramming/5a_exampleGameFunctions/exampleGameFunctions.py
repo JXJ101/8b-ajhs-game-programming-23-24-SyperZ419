@@ -1,7 +1,8 @@
 # Example Game Functions Project, Xavier Oliver, v0.4
 import random
-skillList = ['fireball', 'icebeam', 'thunderbolt','sword slash', 'kamikaze', 'heal', 'guard']
+skillList = ['fireball', 'icebeam', 'thunderbolt','sword slash', 'kamikaze', 'heal', 'guard', 'dark void', 'holy wrath']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
+itemList = ['potion', 'antidote', 'fire-boost', 'ice-boost', 'thunder-boost', 'dark boost', 'light boost', 'revival totem']
 playerHealth = 150
 def generatePlayerStats(): # Generates player stats. No parameters required. 
     stats = []
@@ -96,7 +97,8 @@ def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lan
             critSuccess = False
     return playerDamageDealt # Returns the amount of damage dealt, post crit
 
-
+def playerItemChoose():
+    pass
 
 enemySelect()
 skillUsed = playerTurn(playerHealth)
