@@ -53,17 +53,19 @@ def playerName(): # Obtains character's name from user input. No parameters.
     return name # Returns name of character.
 
 
-# def playerTurn(playerCurrentHealth = playerHealth): # Determines if the player can make their turn, then sees what skill they use. Requires player health. Returns skill used.
-#     while playerHealth > 0:
-#         print(skillList)
-#         skill = input('Please select an action from your skill list.').lower
-#         if skill in skillList == True:
-#             print(f'You used {skill}.')
-#             break
-#         else:
-#             skill = input('Chosen skill not found. Please choose a skill from your skill list.').lower
-#             break
-#     return skill
+def playerTurn(playerCurrentHealth): # Determines if the player can make their turn, then sees what skill they use. Requires player health. Returns skill used.
+    while playerHealth > 0:
+        print(skillList)
+        skill = input('Please select an action from your skill list.\n').lower() # Lines 59 - 62 based on code from https://www.geeksforgeeks.org/check-if-element-exists-in-list-in-python/
+        count = skillList.count(skill)
+        #print(count)
+        if count > 0:
+                print(f'You used {skill}.')
+                break
+        else:
+            print('Chosen skill not found.')
+            continue
+    return skill
 
 def gameOver(playerCurrentHealth): # Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
     if playerCurrentHealth <= 0:
@@ -97,8 +99,8 @@ def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lan
 
 # playerName()
 # enemySelect()
-#skillUsed = playerTurn()
-# playerDamage = damageCalc(skillUsed, 45)
-#playerHealth -= playerDamage
+skillUsed = playerTurn(playerHealth)
+playerDamage = damageCalc(skillUsed, 45)
+playerHealth -= playerDamage
 # gameOver(playerHealth)
-criticalHit('fireball', 23)
+# criticalHit('fireball', 23)
