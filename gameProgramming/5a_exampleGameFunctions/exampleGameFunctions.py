@@ -98,11 +98,21 @@ def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lan
     return playerDamageDealt # Returns the amount of damage dealt, post crit
 
 def playerItemChoose():
-    pass
+    print(itemList)
+    item = input(f'{playerName}, please select an item from your inventory.\n').lower() # Lines 103 - 104 based on code from https://www.geeksforgeeks.org/check-if-element-exists-in-list-in-python/
+    for item in itemList:
+        if item in itemList:
+                print(f'You used {item}.')
+                break
+        else:
+            print('Chosen item not found.')
+            continue
+    return item
 
-enemySelect()
-skillUsed = playerTurn(playerHealth)
-playerDamage = damageCalc(skillUsed, 45)
-playerHealth -= playerDamage
-gameOver(playerHealth)
-criticalHit('fireball', 23)
+# enemySelect()
+playerItem = playerItemChoose()
+# skillUsed = playerTurn(playerHealth)
+# criticalHit(skillUsed, 23)
+# playerDamage = damageCalc(skillUsed, 45)
+# playerHealth -= playerDamage
+# gameOver(playerHealth)
