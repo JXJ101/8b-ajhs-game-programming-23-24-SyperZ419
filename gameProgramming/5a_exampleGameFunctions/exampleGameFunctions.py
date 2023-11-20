@@ -42,7 +42,7 @@ def enemySelect(): # Chooses a random enemy and amount of enemies. No parameters
         print(f'You encountered {enemyAmount} {enemy}s.')
     
         
-def playerName(): # Obtains character's name from user input. No parameters. 
+def namePlayer(): # Obtains character's name from user input. No parameters. 
     name = input('Name your character.')
     nameConfirm = int(input(f'Your input name is {name}, correct? \nPlease input either yes(1) or no(2).'))
     if nameConfirm == 1:
@@ -51,12 +51,12 @@ def playerName(): # Obtains character's name from user input. No parameters.
         nameConfirm = input('Please re-input the name of your character.')
         print('Character name confirmed.')
     return name # Returns name of character.
-
+playerName = namePlayer()
 
 def playerTurn(playerCurrentHealth): # Determines if the player can make their turn, then sees what skill they use. Requires player health. Returns skill used.
     while playerHealth > 0:
         print(skillList)
-        skill = input('Please select an action from your skill list.\n').lower() # Lines 59 - 62 based on code from https://www.geeksforgeeks.org/check-if-element-exists-in-list-in-python/
+        skill = input(f'{playerName}, please select an action from your skill list.\n').lower() # Lines 59 - 62 based on code from https://www.geeksforgeeks.org/check-if-element-exists-in-list-in-python/
         count = skillList.count(skill)
         #print(count)
         if count > 0:
@@ -97,10 +97,10 @@ def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lan
     return playerDamageDealt # Returns the amount of damage dealt, post crit
 
 
-# playerName()
-# enemySelect()
+
+enemySelect()
 skillUsed = playerTurn(playerHealth)
 playerDamage = damageCalc(skillUsed, 45)
 playerHealth -= playerDamage
-# gameOver(playerHealth)
-# criticalHit('fireball', 23)
+gameOver(playerHealth)
+criticalHit('fireball', 23)
