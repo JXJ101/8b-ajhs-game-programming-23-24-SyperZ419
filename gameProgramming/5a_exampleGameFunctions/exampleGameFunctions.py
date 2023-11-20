@@ -9,6 +9,7 @@ def generatePlayerStats(): # Generates player stats. No parameters required. Ret
     stats.append(random.randint(1, 30)) # Defense
     stats.append(random.randint(1, 30)) # Speed
     stats.append(random.randint(1, 30)) # Accuracy
+    stats.append(random.randint(1, 15)) # Luck
     print(stats)
     return stats
     
@@ -64,17 +65,19 @@ def playerName(): # Obtains character's name from user input. No parameters. Ret
 #             break
 #     return skill
 
-def gameOver(playerCurrentHealth = playerHealth): # Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
+def gameOver(playerCurrentHealth): # Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
     if playerCurrentHealth <= 0:
         input('You have lost all of your health. \nGame Over.')
 
-
+def criticalHit(skillUsed, playerDamageDealt):
+    pass
 
 
 
 # playerName()
 # enemySelect()
 #skillUsed = playerTurn()
-#playerDamage = damageCalc(skillUsed, 45)
+# playerDamage = damageCalc(skillUsed, 45)
 #playerHealth -= playerDamage
-gameOver(0)
+# gameOver(playerHealth)
+criticalHit('fireball', 23)
