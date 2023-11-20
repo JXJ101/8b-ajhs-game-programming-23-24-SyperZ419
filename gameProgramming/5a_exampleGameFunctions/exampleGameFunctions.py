@@ -1,9 +1,9 @@
-# Example Game Functions Project, Xavier Oliver, v0.3
+# Example Game Functions Project, Xavier Oliver, v0.4
 import random
 skillList = ['fireball', 'icebeam', 'thunderbolt','sword slash', 'kamikaze', 'heal', 'guard']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
 playerHealth = 150
-def generatePlayerStats(): # Generates player stats. No parameters required. Returns the stats list.
+def generatePlayerStats(): # Generates player stats. No parameters required. 
     stats = []
     stats.append(random.randint(1, 30)) # Attack
     stats.append(random.randint(1, 30)) # Defense
@@ -11,7 +11,7 @@ def generatePlayerStats(): # Generates player stats. No parameters required. Ret
     stats.append(random.randint(1, 30)) # Accuracy
     stats.append(random.randint(1, 15)) # Luck
     print(stats)
-    return stats
+    return stats # Returns the stats list.
     
 statsList = generatePlayerStats() # Outputs returned list to a new variable
 #print(statsList[1])
@@ -42,7 +42,7 @@ def enemySelect(): # Chooses a random enemy and amount of enemies. No parameters
         print(f'You encountered {enemyAmount} {enemy}s.')
     
         
-def playerName(): # Obtains character's name from user input. No parameters. Returns name of character.
+def playerName(): # Obtains character's name from user input. No parameters. 
     name = input('Name your character.')
     nameConfirm = int(input(f'Your input name is {name}, correct? \nPlease input either yes(1) or no(2).'))
     if nameConfirm == 1:
@@ -50,7 +50,7 @@ def playerName(): # Obtains character's name from user input. No parameters. Ret
     else:
         nameConfirm = input('Please re-input the name of your character.')
         print('Character name confirmed.')
-    return name
+    return name # Returns name of character.
 
 
 # def playerTurn(playerCurrentHealth = playerHealth): # Determines if the player can make their turn, then sees what skill they use. Requires player health. Returns skill used.
@@ -69,7 +69,7 @@ def gameOver(playerCurrentHealth): # Checks to see if the player's health is les
     if playerCurrentHealth <= 0:
         input('You have lost all of your health. \nGame Over.')
 
-def criticalHit(skillUsed, playerDamageDealt):
+def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lands a crit, and determines the strength of that crit. Requires the skill used and how much damage the player dealt.
     critMultiplier = 1.50
     if skillUsed != 'guard':
         critRoll = random.randint(1, 100)
@@ -79,20 +79,20 @@ def criticalHit(skillUsed, playerDamageDealt):
                 critMultiplier = 2.0
                 playerDamageDealt *= critMultiplier
                 if type(playerDamageDealt) == float:
-                    round(playerDamageDealt)
-                    int(playerDamageDealt)
+                    playerDamageDealt = round(playerDamageDealt)
+                    playerDamageDealt = int(playerDamageDealt)
                     print(f'Because of your high luck, you landed a strong critical hit. \nYou dealt {playerDamageDealt} damage.')
                 else:
                     print(f'Because of your high luck, you landed a strong critical hit. \nYou dealt {playerDamageDealt} damage.')
-            else:
+            elif statsList[4] < 10:
                 playerDamageDealt *= critMultiplier
-                round(playerDamageDealt)
-                int(playerDamageDealt)
-                print(f'You landed a critical hit. \nYou dealt {playerDamageDealt} damage.')
-
+                if type(playerDamageDealt) == float:
+                    playerDamageDealt = round(playerDamageDealt)
+                    playerDamageDealt = int(playerDamageDealt)
+                    print(f'You landed a critical hit. \nYou dealt {playerDamageDealt} damage.')
         else:
             critSuccess = False
-    return playerDamageDealt
+    return playerDamageDealt # Returns the amount of damage dealt, post crit
 
 
 # playerName()
