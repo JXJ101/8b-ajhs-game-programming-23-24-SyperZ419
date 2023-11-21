@@ -1,4 +1,4 @@
-# Example Game Functions Project, Xavier Oliver, v0.4
+# Example Game Functions Project, Xavier Oliver, v0.5
 import random
 skillList = ['fireball', 'icebeam', 'thunderbolt','sword slash', 'kamikaze', 'heal', 'guard', 'dark void', 'holy wrath']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
@@ -99,9 +99,10 @@ def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lan
 
 def playerItemChoose():
     print(itemList)
-    item = input(f'{playerName}, please select an item from your inventory.\n').lower() # Lines 103 - 104 based on code from https://www.geeksforgeeks.org/check-if-element-exists-in-list-in-python/
-    for item in itemList:
-        if item in itemList:
+    item = input(f'{playerName}, please select an item from your inventory.\n').lower()
+    # count = itemList.count(item)
+    for i in range(len(itemList) - 1):
+        if item == itemList[i]:
                 print(f'You used {item}.')
                 break
         else:
