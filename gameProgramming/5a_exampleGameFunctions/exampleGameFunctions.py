@@ -97,7 +97,7 @@ def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lan
             critSuccess = False
     return playerDamageDealt # Returns the amount of damage dealt, post crit
 
-def playerItemChoose():
+def playerItemChoose(): # Checks to see if a chosen item is in the itme list, then tells the player they used that item. No parameters.
     print(itemList)
     item = input(f'{playerName}, please select an item from your inventory.\n').lower()
     # count = itemList.count(item)
@@ -108,7 +108,7 @@ def playerItemChoose():
         else:
             print('Chosen item not found.')
             continue
-    return item
+    return item # Returns the used item.
 
 enemySelect()
 playerItem = playerItemChoose()
