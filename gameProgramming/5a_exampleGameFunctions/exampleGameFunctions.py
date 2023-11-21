@@ -110,10 +110,10 @@ def playerItemChoose():
             continue
     return item
 
-# enemySelect()
+enemySelect()
 playerItem = playerItemChoose()
-# skillUsed = playerTurn(playerHealth)
-# criticalHit(skillUsed, 23)
-# playerDamage = damageCalc(skillUsed, 45)
-# playerHealth -= playerDamage
-# gameOver(playerHealth)
+skillUsed = playerTurn(playerHealth)
+criticalHit(skillUsed, 23)
+playerDamage = damageCalc(skillUsed, 45)
+playerHealth -= playerDamage
+gameOver(playerHealth)
