@@ -2,7 +2,7 @@
 import random
 skillList = ['fireball', 'icebeam', 'thunderbolt','sword slash', 'kamikaze', 'heal', 'guard', 'dark void', 'holy wrath']
 enemyList = ['Goblin', 'Goblin Soldier', 'Goblin Chief', 'Skeleton Knight', 'Haunted Armor', 'Undead Wizard', 'Dragon', 'Hydra']
-itemList = ['potion', 'antidote', 'fire-boost', 'ice-boost', 'thunder-boost', 'dark boost', 'light boost', 'revival totem']
+itemList = ['potion', 'antidote', 'fire-boost', 'ice-boost', 'thunder-boost', 'dark-boost', 'light-boost', 'revival totem']
 playerHealth = 150
 def generatePlayerStats(): # Generates player stats. No parameters required. 
     stats = []
