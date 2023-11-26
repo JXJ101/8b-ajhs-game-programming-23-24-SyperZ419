@@ -74,7 +74,7 @@ def playerTurn(playerCurrentHealth): # Determines if the player can make their t
 
 def gameOver(playerCurrentHealth): # Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
     if playerCurrentHealth <= 0:
-        input('You have lost all of your health. \nGame Over.')
+        print('You have lost all of your health. \nGame Over.')
 
 def criticalHit(skillUsed, playerDamageDealt): # Checks to see if the player lands a crit, and determines the strength of that crit. Requires the skill used and how much damage the player dealt.
     critMultiplier = 1.50
