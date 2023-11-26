@@ -6,12 +6,16 @@ itemList = ['potion', 'antidote', 'fire-boost', 'ice-boost', 'thunder-boost', 'd
 playerHealth = 150
 def generatePlayerStats(): # Generates player stats. No parameters required. 
     stats = []
-    stats.append(random.randint(1, 30)) # Attack
+    stats.append(random.randint(1, 30)) # Strength
     stats.append(random.randint(1, 30)) # Defense
     stats.append(random.randint(1, 30)) # Speed
     stats.append(random.randint(1, 30)) # Accuracy
     stats.append(random.randint(1, 15)) # Luck
-    print(stats)
+    print(f"Strength: {stats[0]}")
+    print(f"Defense: {stats[1]}")
+    print(f"Speed: {stats[2]}")
+    print(f"Accuracy: {stats[3]}")
+    print(f"Luck: {stats[4]}")
     return stats # Returns the stats list.
     
 statsList = generatePlayerStats() # Outputs returned list to a new variable
