@@ -53,7 +53,7 @@ def namePlayer(): # Obtains character's name from user input. No parameters.
     if nameConfirm == 1:
         print('Character name confirmed.')
     else:
-        nameConfirm = input('Please re-input the name of your character.')
+        name = input('Please re-input the name of your character.')
         print('Character name confirmed.')
     return name # Returns name of character.
 playerName = namePlayer()
